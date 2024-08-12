@@ -10,22 +10,21 @@ To build them use `make`.
 
 To use them in SQLite3 via the CLI you can do the following:
 
-        sqlite3 my.db
-        .load ./libfuzzysame
-        .load ./libsamename
-        .load ./libregexp
+    sqlite3 my.db
+    .load ./libfuzzysame
+    .load ./libsamename
+    .load ./libregexp
 
 Or if you're within Datasette you can do:
 
-        datasette --load-extension ./libfuzzysame.so \
-                  --load-extension ./libsamename.so \
-                  --load-extension ./libregexp.so
+    datasette --load-extension ./libfuzzysame.so \
+              --load-extension ./libsamename.so \
+              --load-extension ./libregexp.so
 
 Similarly for sqlite-utils:
 
-        sqlite-utils --load-extension=./libregexp.so
+    sqlite-utils --load-extension=./libregexp.so
 
 From there you should be able to run queries using these functions:
 
-
-        select id, name, email from users where regexp_match(email, ".*@.*.google.com$");
+    select id, name, email from users where regexp_match(email, ".*@.*.google.com$");

@@ -2,7 +2,7 @@
 
 This is a collection of SQLite extensions that provide various functionality that I've needed in my work.
 
- - `fuzzysame.c` - `fuzzysame(name1,name2,max_distance)` a function that compares two names and returns true when they are above below distance score (0-1)
+ - `fuzzysame.c` - `fuzzysame(name1,name2,max_distance)` a function that compares two names and returns true when they are below a distance score (0 exactly the same to 1 completely different)
  - `samename.cpp` -  `samename(name1, name2)` a function that returns true if two names are determined to be the same despite different formats (e.g., "last, first mid" vs. "first mid last").
  - `sqlite3-regexp.cpp` - provides the following libboost regex functions: `regexp_match(column, regex)`, `regexp_search(column, regex)`, and `regexp_replace(column, regex, format_string)`
 
